@@ -1,4 +1,4 @@
-import kalkulaotr as kalk
+import kalkulator as kalk
 import os
 
 def menu():
