@@ -29,3 +29,42 @@ jobs:
     - name: Run tests
       run: |
         pytest
+
+        
+name: CI/CD with Docker
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install and test
+        run: |
+          npm install
+          npm test
+
+  docker:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build Docker image
+        run: docker build -t ${{ github.repository }}:${{ github.sha }} .
+
+      - name: Test Docker image
+        run: |
+          docker run -d -p 3000:3000 --name test-container ${{ github.repository }}:${{ github.sha }}
+          sleep 10
+          curl -f http://localhost:3000 || exit 1
+          docker stop test-container
