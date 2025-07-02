@@ -24,11 +24,11 @@ def menu():
                     print("Wynik: ", kalk.odejmowanie(x,y))
                     break
                 case "3":
-                    #print("Wynik: ", kalk.mnozenie())
-                    ...
+                    print("Wynik: ", kalk.mnozenie(x,y))
+                    break
                 case "4":
-                    #print("Wynik: ", kalk.dzielenie())
-                    ...
+                    print("Wynik: ", kalk.dzielenie(x,y))
+                    break
                 case "9":
                     os.system("cls")
                 case "0":
