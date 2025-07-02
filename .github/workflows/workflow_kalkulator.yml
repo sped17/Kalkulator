@@ -30,12 +30,6 @@ jobs:
       run: |
         pytest
 
-        
-name: CI/CD with Docker
-
-on:
-  push:
-    branches: [ main ]
 
 jobs:
   test:
@@ -43,7 +37,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Set up Python
+      - name: Setup Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.9'
