@@ -31,7 +31,7 @@ def menu():
                 print("Wynik: ", kalk.dzielenie(x,y))
                 break
             case "5":
-                print("Wynik: ", kalk.potegowanie(y,x))
+                print("Wynik: ", kalk.potegowanie(x,y))
             case "9":
                 os.system("cls")
             case "0":
