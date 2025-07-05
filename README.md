@@ -31,6 +31,7 @@ echo -e "2\n3\n1\n" | docker run -i sped17/kalkulator:latest
 
 ## Dokumentacja
   Funkcje:
+  
     #is_num
       Input: INT | FLOAT x, INT | FLOAT y
       Output: None
@@ -58,7 +59,7 @@ echo -e "2\n3\n1\n" | docker run -i sped17/kalkulator:latest
       Funkcja sprawdza czy argument y nie jest 0 - dzielenie przez 0 = operacja nie możliwa matematycznie
       następnie zwraca argument x podzielony przez argument y 
       
-  #potegowanie
+    #potegowanie
       Input: INT | FLOAT x, INT | FLOAT y
       Output: INT | FLOAT (x^y)
       Funkcja sprawdza czy argument y nie jest 0 - cokolwiek podniesione do zerowej potęgi to 1 - następnie
