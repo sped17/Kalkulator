@@ -11,6 +11,7 @@ def menu():
     print("2. Odejmowanie")
     print("3. Mnożenie")
     print("4. Dzielenie")
+    print("5. Potegowanie")
     print("9. Wyczyść ekran")
     print("0. Wyjdź z programu")
     print("--------------------------------------------------------------------")
