@@ -33,3 +33,9 @@ def test_dzielenie():
     assert k.dzielenie(-1, 1) == -1
     with pytest.raises(ValueError):
         k.dzielenie("p", 0)
+        
+def test_potegowanie():
+    assert k.potegowanie(0, 0) == 1
+    assert k.potegowanie(2, 3) == 8
+    assert k.potegowanie(3, 2) == 9
+
