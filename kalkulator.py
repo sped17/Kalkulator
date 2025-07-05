@@ -22,3 +22,10 @@ def dzielenie(x,y):
     if y == 0:
         return "Blad! Nie mozna dzielic przez 0!"
     return (x/y)
+
+def potegowanie(x,y):
+    is_num(x,y)
+    if y == 0:
+        return 1
+    else:
+        return x**y

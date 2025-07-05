@@ -29,6 +29,8 @@ def menu():
             case "4":
                 print("Wynik: ", kalk.dzielenie(x,y))
                 break
+            case "5":
+                print("Wynik: ", kalk.potegowanie(y,x))
             case "9":
                 os.system("cls")
             case "0":
